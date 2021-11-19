@@ -1,4 +1,4 @@
-#Those scripts were linked in discord. 
+# Those scripts were linked in discord. 
 
 I did not write them. 
 
