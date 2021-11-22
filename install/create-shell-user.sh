@@ -15,7 +15,7 @@ function die () {
 }
 
 declare -A levels=([DEBUG]=0 [INFO]=1 [WARN]=2 [ERROR]=3)
-cript_logging_level="DEBUG" 
+script_logging_level="DEBUG" 
 
 logThis() {
     local log_message=${1:-"Empty message"}
