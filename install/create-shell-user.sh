@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Script to create the basic shell users.
-set -x  # Un/Comment to enable/disable debug.
+#set -x  # Un/Comment to enable/disable debug.
 
 ##############################
 # source ../lib/bash_functions.sh # Makes no sense to load libraries in this script because it is going to be called using wget . 
