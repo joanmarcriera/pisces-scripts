@@ -1,16 +1,21 @@
 #!/bin/bash
 
-echo "======"
+echo "======MINER INFO SUMMARY===="
 docker exec miner miner info summary
-echo "Checks start"
-echo "======"
+echo "========PEER BOOKS======"
+docker exec miner miner peer book -s
+
+echo "======CHECKS START======"
 echo "Hostname = > $(hostname)"
 echo "Uptime   = > $(uptime)"
 echo "Docker ps => $(docker ps)"
-echo "Public IP => $(curl ifconfig.me)"
+echo "Public IP => $(curl -s ifconfig.me)"
 
 
+echo "blockchain height"
+curl -s https://api.helium.io/v1/blocks/height | jq .
+echo "Miner height"
+docker exec miner miner info height
 
-echo "====="
-echo "Checks end"
+echo "===== CHECKS END ======"
 
