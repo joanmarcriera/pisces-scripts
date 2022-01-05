@@ -27,11 +27,11 @@ make install
   
 
 # Config ssh (follow instructions to create ssh keys, use the poublic one created here https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
-echo 'ssh-rsa REDACTED_LONG_PUBLIC_KEY my-name-for-reference-you-can-put-whatever' >> ~/.ssh/authorized_keys
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7nhZCju4BijbI5BAjHylJYEFoCwEmrMKLpN3zy9VHRD+10JI0q2WC2iMcfpQIy4tVtrpGoZe4nNgm12un3Qq90LIY35ahWTXGnGBYsRamaEAmyrQByXraQgtr3apmALQrSK4hqHpNOjR7s65HW7+RxfiEPUSevdL7hcx4Yq7mYXZ8kvRu/uyHb0X4Gr58ro4CbvbSOTVC7QL2NfLTG7gHv91aGRWb77jeOSLxD7kU2jcJEbQtbCxYJ/o8TXKgVuhdAle58SuxlYwI7U/lz/jcw4XvYWprrsSL41VOSWzDAGoh5JgCQzTfficTG+6AFOuOFoyR0XgH4MsM7XRBtIpF /Users/mriera/.ssh/id_rsa' >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 # Config tmate (key comes from https://tmate.io/)
-echo 'set tmate-api-key "tmk-KEY-from-web"
-set tmate-authorized-keys "~/.ssh/authorized_keys"' > ~./tmate.conf
+echo 'set tmate-api-key "tmk-FDgVgTnUYfa6dvtBkCpK4COR5P"
+set tmate-authorized-keys "~/.ssh/authorized_keys"' > ~/.tmate.conf
 
 #Get your HS name
 docker exec miner miner info summary
