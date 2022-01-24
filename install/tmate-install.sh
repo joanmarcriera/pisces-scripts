@@ -56,18 +56,18 @@ root@raspberrypi:/# reboot
 
 #Config daemon
 echo '[Install]
-> WantedBy=multi-user.target
->
-> [Unit]
-> Description=Tmate-SSH
-> Wants=network-online.target
-> After=network-online.target
->
-> [Service]
-> Type=simple
-> Restart=always
-> User=root
-> ExecStart=/usr/local/bin/tmate -F -n raspberrypi-corgi' > /etc/systemd/system/tmate.service
+WantedBy=multi-user.target
+
+[Unit]
+Description=Tmate-SSH
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+User=root
+ExecStart=/usr/local/bin/tmate -F -n raspberrypi-yak' > /etc/systemd/system/tmate.service
 
 systemctl daemon-reload
 
