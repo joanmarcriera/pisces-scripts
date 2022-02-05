@@ -6,8 +6,8 @@ TARGET=80
 if [ $((ACTUAL)) -gt $((TARGET)) ]
 then
 	/root/pisces-scripts/troubleshooting/clear_resync.sh
+  echo "Disk was full, now it should be empty"
 fi
 
-echo "Disk was full, now it should be empty"
-df -h 
+df -HPT
 
