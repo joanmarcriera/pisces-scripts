@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function some_seconds(){
+some_seconds () {
 	sleep 10
 }
 
