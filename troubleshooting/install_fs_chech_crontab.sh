@@ -12,14 +12,14 @@ fi
 
 
 CRONTAB=/var/spool/cron/crontabs/root
-LINE='0 0 * * * /root/pisces-scripts/troubleshooting/fs_check.sh' 
+LINE='/root/pisces-scripts/troubleshooting/fs_check.sh' 
 if [ -f $CRONTAB ];
 then
   if [ ! -z $(grep "$LINE" "$CRONTAB") ]; then echo "FOUND" ; exit 1; fi
-  echo $LINE >> /var/spool/cron/crontabs/root
+  echo "0 0 * * * $LINE" >> /var/spool/cron/crontabs/root
   systemctl restart cron.service
 else
-  echo $LINE >> crontab_new
+  echo "0 0 * * * $LINE" >> crontab_new
   crontab -u root crontab_new
   rm crontab_new
   systemctl restart cron.service
