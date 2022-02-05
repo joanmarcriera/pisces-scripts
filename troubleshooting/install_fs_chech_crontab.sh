@@ -12,7 +12,7 @@ fi
 
 
 CRONTAB=/var/spool/cron/crontabs/root
-LINE="0 0 * * * /root/pisces-scripts/troubleshooting/fs_check.sh" 
+LINE='0 0 * * * /root/pisces-scripts/troubleshooting/fs_check.sh' 
 if [ -f $CRONTAB ];
 then
   if [ ! -z $(grep "$LINE" "$CRONTAB") ]; then echo "FOUND" ; exit 1; fi
