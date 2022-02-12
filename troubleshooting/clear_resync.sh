@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "$(date +%F_%T) $0 $(df -HPT /) " >> /var/log/marc_${0}.log
 
 echo "Stopping the miner ..."
 sudo docker stop miner
