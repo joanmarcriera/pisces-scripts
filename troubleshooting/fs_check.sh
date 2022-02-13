@@ -5,7 +5,7 @@ git pull
 
 
 ACTUAL=`df -h /|grep -v File|awk '{print $5}'|rev|cut -c2-|rev`
-TARGET=80
+TARGET=90
 
 if [ $((ACTUAL)) -gt $((TARGET)) ]
 then
