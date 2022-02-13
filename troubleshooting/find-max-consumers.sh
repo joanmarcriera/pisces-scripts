@@ -2,10 +2,10 @@
 #ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10
 
 #mem
-ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head
+ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head -n5
 
 #cpu
-ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%cpu | head
+ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%cpu | head -n5
 
 
 #find max ioconsumers
