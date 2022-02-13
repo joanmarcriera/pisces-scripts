@@ -6,3 +6,10 @@ ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head
 
 #cpu
 ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%cpu | head
+
+
+#find max ioconsumers
+#iotop -aoP
+#-a    Will show accumulated output
+#-o    Will only output 
+#-P    Will only show processes instead of threads
